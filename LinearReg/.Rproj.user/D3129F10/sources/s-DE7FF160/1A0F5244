@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1557234307586.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "1A0F5244",
+    "lastKnownWriteTime" : 1557238290,
+    "last_content_update" : -2147483648,
+    "path" : "D:/NOTES (2)/NOTES/2019SPRING/MATH3426/LinearReg/R/hello.R",
+    "project_path" : "R/hello.R",
+    "properties" : {
+        "cursorPosition" : "39,0",
+        "scrollLine" : "19"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

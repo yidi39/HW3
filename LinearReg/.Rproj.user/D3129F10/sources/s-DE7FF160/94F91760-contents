@@ -1,0 +1,27 @@
+
+Q <- as.matrix(read.table("Q.txt", head = F))
+R <- as.matrix(read.table("R.txt", head = F))
+
+
+hw2_9_20328654<-function(Q,R,K){
+  result<-matrix(0,K,dim(Q)[1])
+
+  for (j in 1: dim(Q)[1]){
+    distance2<-rep(0,dim(R)[1])
+
+    for (i in 1:dim(R)[1]) {
+
+      for (p in 1:dim(Q)[2])
+        distance2[i]<-distance2[i]+(Q[j,p]-R[i,p])**2
+
+    }
+
+    for (q in 1:K)
+    result[q,j]<-order(distance2)[q]
+  }
+  return (result)
+}
+
+hw2_9_20328654(Q,R,2)
+
+
