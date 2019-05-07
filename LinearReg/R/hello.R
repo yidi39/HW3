@@ -15,14 +15,12 @@
 
 LinearReg <- function(x,y) {
   beta = (solve(t(x)%*%x))%*%t(x)%*%y
-  cat("beta: ", beta)
+  cat("beta: ", beta,"\n")
   se = sqrt(sum((y-x%*%beta)**2)/(dim(x)[1]-dim(x)[2]))
-  cat("se: ", se)
-  t = beta/se*sqrt(dim(x)[1])
-  cat("t-value: ",t)
-  p =2*pt(t, dim(x)[1]-2)
-  cat("p-value: ", p)
-  return(beta)
+  cov = sqrt(se*se*solve(t(x)%*%x))
+  cat("se: ", diag(cov),"\n")
+  t = beta/diag(cov)
+  cat("t-value: ",t,"\n")
+  p =2*pt(abs(t), dim(x)[1]-1,lower=FALSE)
+  cat("p-value: ", p,"\n")
 }
-
-
